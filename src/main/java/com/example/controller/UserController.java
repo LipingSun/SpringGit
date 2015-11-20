@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @RequestMapping(value = "{id}", method = RequestMethod.GET)
     public ResponseEntity<?> getPersonJSON(@PathVariable("id") long userId) {
-        if (userId == 3) {
+        if (userId == 2) {
             return new ResponseEntity<>(new User(1, "user1", "user1@gmail.com", "This is user1"), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
