@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.entity.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +17,7 @@ public class UserController {
     @RequestMapping(value = "{id}", method = RequestMethod.GET)
     public ResponseEntity<?> getPersonJSON(@PathVariable("id") long userId) {
         if (userId == 1) {
-            return new ResponseEntity<>(1, HttpStatus.OK);
+            return new ResponseEntity<>(new User(1, "user1", "user1@gmail.com", "This is user1"), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
