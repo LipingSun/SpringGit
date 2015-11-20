@@ -4,16 +4,23 @@ package com.example.entity;
  * Created by Liping on 11/18/15.
  */
 public class User {
-    private long id;
+    private int id;
     private String username;
     private String email;
     private String description;
+
+    public User(int id, String username, String email, String description) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.description = description;
+    }
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
