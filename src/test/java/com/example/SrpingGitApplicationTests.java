@@ -13,6 +13,7 @@ public class SrpingGitApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		// test master protect
 	}
 
 }
